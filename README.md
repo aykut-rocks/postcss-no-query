@@ -2,15 +2,21 @@
 
 [PostCSS] plugin for no-query fallbacks.
 
+### input
+
 ```css
-.foo {
-    /* Input example */
+@media (min-width: 1024px) {
+  .foo {
+    border: 1px solid #d00;
+  }
 }
 ```
 
+### output
+
 ```css
 .nobp .foo {
-  /* Output example */
+  border: 1px solid #d00;
 }
 ```
 
