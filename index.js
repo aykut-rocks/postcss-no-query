@@ -2,17 +2,18 @@ var postcss = require('postcss');
 
 var defaults = {
 	fallback: true,
-	prefix: ".nobp",
-	query: "(--xlarge)"
+	prefix: ".no-query",
+	query: "(min-width: 1024px)"
 };
 
 module.exports = postcss.plugin("postcss-no-query", opts => {
+	console.log('HULK: ', opts);
 	opts = opts || {};
 	var options = Object.assign(defaults, opts);
 
 	return function(root) {
 		root.walkAtRules("media", atRule => {
-			if (options.fallback && atRule.params === defaults.query) {
+			if (options.fallback && atRule.params === options.query) {
 			const clonedRules = [];
 
 			// Clone the existing rules under the atRule

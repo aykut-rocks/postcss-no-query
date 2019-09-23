@@ -28,8 +28,12 @@ postcss([ require('postcss-no-query') ])
 
 ### Defaults (can be overwritten)
 
-* fallback: true (deactivates no query fallback)
-* prefix: ".nobp" (default parent selector)
-* query: "(min-width: 1024px)" (limit query fallback to specific expression)
+* `fallback: true` (deactivates no query fallback)
+* `prefix: ".no-query"` (default parent selector)
+* `query: "(min-width: 1024px)"` (limit query fallback to specific expression)
+
+## Notice
+
+This plugin doesn't work with nested media queries, because they are not part of the official nesting proposal. See also the notice on [postcss-nesting](https://github.com/jonathantneal/postcss-nesting).
 
 See [PostCSS](https://github.com/postcss/postcss/tree/master/docs) docs for examples for your environment.
