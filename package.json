@@ -1,0 +1,31 @@
+{
+  "name": "postcss-no-query",
+  "version": "1.0.0",
+  "description": "PostCSS plugin that generates no-query fallbacks.",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "no-query",
+    "fallback"
+  ],
+  "scripts": {
+    "test": "jest *.js"
+  },
+  "author": "Sensoy, Aykut",
+  "license": "MIT",
+  "repository": "aykut-rocks/postcss-no-query",
+  "bugs": {
+    "url": "https://github.com/aykut-rocks/postcss-no-query/issues"
+  },
+  "homepage": "https://github.com/aykut-rocks/postcss-no-query",
+  "dependencies": {
+    "postcss": "^7.0.18"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
