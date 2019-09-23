@@ -1,6 +1,6 @@
 # PostCSS No Query
 
-[PostCSS] plugin for no-query fallbacks.
+[PostCSS](https://postcss.org) plugin for no-query fallbacks.
 
 ### input
 
@@ -32,4 +32,4 @@ postcss([ require('postcss-no-query') ])
 * prefix: ".nobp" (default parent selector)
 * query: "(min-width: 1024px)" (limit query fallback to specific expression)
 
-See [PostCSS] docs for examples for your environment.
+See [PostCSS](https://github.com/postcss/postcss/tree/master/docs) docs for examples for your environment.
