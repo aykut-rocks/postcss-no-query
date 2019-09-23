@@ -1,6 +1,6 @@
 # PostCSS No Query
 
-[PostCSS](https://postcss.org) plugin for no-query fallbacks.
+[PostCSS](https://postcss.org) plugin for no-query fallbacks, similar to the [no-query fallback](https://github.com/at-import/breakpoint/wiki/no-query-fallbacks) feature in the sass breakpoint mixin.
 
 ### input
 
