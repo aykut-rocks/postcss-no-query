@@ -3,7 +3,7 @@ var postcss = require('postcss');
 var defaults = {
 	fallback: true,
 	prefix: ".nobp",
-	query: "(min-width: 1024px)"
+	query: "--xlarge"
 };
 
 module.exports = postcss.plugin("postcss-no-query", opts => {
@@ -13,18 +13,18 @@ module.exports = postcss.plugin("postcss-no-query", opts => {
 	return function(root) {
 		root.walkAtRules("media", atRule => {
 			if (options.fallback && atRule.params === defaults.query) {
-              	const clonedRules = [];
-                
-                // Clone the existing rules under the atRule
-                atRule.walkRules(rule => {
-                  clonedRules.push(rule.clone());
-                });
-              	
-                // Append the prefix to the selector
-                clonedRules.forEach(rule => {
-                	rule.selector = `${options.prefix} ${rule.selector}`;
-                });
-              	root.insertAfter(atRule,clonedRules);
+			const clonedRules = [];
+
+			// Clone the existing rules under the atRule
+			atRule.walkRules(rule => {
+				clonedRules.push(rule.clone());
+			});
+
+			// Append the prefix to the selector
+			clonedRules.forEach(rule => {
+				rule.selector = `${options.prefix} ${rule.selector}`;
+			});
+			root.insertAfter(atRule,clonedRules);
 			}
 		});
 	};
