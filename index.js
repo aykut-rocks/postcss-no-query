@@ -3,7 +3,7 @@ var postcss = require('postcss');
 var defaults = {
 	fallback: true,
 	prefix: ".nobp",
-	query: "--xlarge"
+	query: "(--xlarge)"
 };
 
 module.exports = postcss.plugin("postcss-no-query", opts => {
