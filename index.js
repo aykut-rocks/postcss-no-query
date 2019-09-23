@@ -7,7 +7,6 @@ var defaults = {
 };
 
 module.exports = postcss.plugin("postcss-no-query", opts => {
-	console.log('HULK: ', opts);
 	opts = opts || {};
 	var options = Object.assign(defaults, opts);
 
