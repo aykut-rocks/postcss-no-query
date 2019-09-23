@@ -15,6 +15,12 @@
 ### output
 
 ```css
+@media (min-width: 1024px) {
+  .foo {
+    border: 1px solid #d00;
+  }
+}
+
 .nobp .foo {
   border: 1px solid #d00;
 }
