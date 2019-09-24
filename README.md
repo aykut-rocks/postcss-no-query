@@ -32,11 +32,17 @@
 postcss([ require('postcss-no-query') ])
 ```
 
-### Defaults (can be overwritten)
+### Defaults
 
 * `fallback: true` (deactivates no query fallback)
-* `prefix: ".no-query"` (default parent selector)
-* `query: "(min-width: 1024px)"` (limit query fallback to specific expression)
+* `prefix: ".no-query"` (renders prefix as a parent selector)
+* `query: []` (limits query fallback to specific media query expression)
+
+### Overwrite Defaults
+
+* `fallback: false` (boolean)
+* `prefix: ".nobp"` (string)
+* `query: ['(min-width: 600px)', '(min-width: 1024px)']` (array)
 
 ## Notice
 
