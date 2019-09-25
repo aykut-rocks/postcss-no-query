@@ -2,6 +2,33 @@
 
 [PostCSS](https://postcss.org) plugin for no-query fallbacks, similar to the [no-query fallback](https://github.com/at-import/breakpoint/wiki/no-query-fallbacks) feature in the sass breakpoint mixin.
 
+## Usage
+
+```js
+postcss([ require('postcss-no-query') ])
+```
+
+### Defaults
+
+* `fallback: true (boolean)` (renders no-query fallbacks by default if no-query fallbacks are defined)
+* `prefix: ".no-query" (string)` (default prefix which is rendered as a parent selector)
+* `query: [] (array)` (empty by default, no-query fallbacks are not defined)
+
+### Overwrite Defaults
+
+* `fallback: false` (deactivates no-query fallbacks, even if no-query fallbacks are defined)
+* `prefix: ".nobp"` (customizes the default prefix)
+* `query: ['(min-width: 600px)', '(min-width: 1024px)']` (defines no-query fallbacks for specific media query expressions)
+
+## Example
+
+### configuration
+
+```js
+prefix: ".nobp"
+query: ['(min-width: 1024px)']
+```
+
 ### input
 
 ```css
@@ -25,24 +52,6 @@
   border: 1px solid #d00;
 }
 ```
-
-## Usage
-
-```js
-postcss([ require('postcss-no-query') ])
-```
-
-### Defaults
-
-* `fallback: true` (deactivates no query fallback)
-* `prefix: ".no-query"` (renders prefix as a parent selector)
-* `query: []` (limits query fallback to specific media query expression)
-
-### Overwrite Defaults
-
-* `fallback: false` (boolean)
-* `prefix: ".nobp"` (string)
-* `query: ['(min-width: 600px)', '(min-width: 1024px)']` (array)
 
 ## Notice
 
