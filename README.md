@@ -32,9 +32,19 @@ query: ['(min-width: 1024px)']
 ### input
 
 ```css
+.foo {
+  border: 1px solid black;
+}
+
+@media (min-width: 600px) {
+  .foo {
+    border: 1px solid red;
+  }
+}
+
 @media (min-width: 1024px) {
   .foo {
-    border: 1px solid #d00;
+    border: 1px solid yellow;
   }
 }
 ```
@@ -42,14 +52,24 @@ query: ['(min-width: 1024px)']
 ### output
 
 ```css
+.foo {
+  border: 1px solid black;
+}
+
+@media (min-width: 600px) {
+  .foo {
+    border: 1px solid red;
+  }
+}
+
 @media (min-width: 1024px) {
   .foo {
-    border: 1px solid #d00;
+    border: 1px solid yellow;
   }
 }
 
 .nobp .foo {
-  border: 1px solid #d00;
+  border: 1px solid yellow;
 }
 ```
 
