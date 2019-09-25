@@ -1,4 +1,4 @@
-var postcss = require('postcss');
+var postcss = require("postcss");
 
 var defaults = {
 	fallback: true,
@@ -12,21 +12,21 @@ module.exports = postcss.plugin("postcss-no-query", opts => {
 
 	return function(root) {
 		root.walkAtRules("media", atRule => {
-            const queries = options.query ? options.query.indexOf(atRule.params) > -1 : true;
-          
+			const queries = options.query.indexOf(atRule.params) > -1;
+
 			if (options.fallback && queries) {
-			const clonedRules = [];
+				const clonedRules = [];
 
-			// Clone the existing rules under the atRule
-			atRule.walkRules(rule => {
-				clonedRules.push(rule.clone());
-			});
+				// Clone the existing rules under the atRule
+				atRule.walkRules(rule => {
+					clonedRules.push(rule.clone());
+				});
 
-			// Append the prefix to the selector
-			clonedRules.forEach(rule => {
-				rule.selector = `${options.prefix} ${rule.selector}`;
-			});
-			root.insertAfter(atRule, clonedRules);
+				// Append the prefix to the selector
+				clonedRules.forEach(rule => {
+					rule.selector = `${options.prefix} ${rule.selector}`;
+				});
+				root.insertAfter(atRule, clonedRules);
 			}
 		});
 	};
