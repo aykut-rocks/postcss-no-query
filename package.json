@@ -1,6 +1,6 @@
 {
   "name": "postcss-no-query",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "PostCSS plugin that generates no-query fallbacks.",
   "keywords": [
     "postcss",
